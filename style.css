@@ -24,7 +24,9 @@
 }
 
 .home{
-    background-color: aliceblue;
+    background: linear-gradient(195deg, #000000 60%, #ffffff 20%);
+    
+    color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
 
@@ -98,13 +100,15 @@
     text-align: center;
 }
 
+/* ///////////////////////////////////////////////////ABOUT///////////////////////////////////////////////// */
+
 
 
 .content {
     padding-top: 2em;
     height: 2000px;
     width: 100vw;
-    background-color: #adb5bd;
+
 }
 
 
@@ -119,9 +123,10 @@
         padding-left: 2rem;
 }
 
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\PROJECTS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 
-
+/* 
 .proh1{
     margin-top: 2em;
     padding-left: 2rem;
@@ -134,8 +139,8 @@
     align-items: center;
     justify-content:space-evenly;
     background-color: aliceblue;
-    height:50vh;
-    width: 95vw;
+    height:100vh;
+    width: 100vw;
 }
 
 .pro{
@@ -163,80 +168,127 @@
     background-image: url(Amazon.png);
     max-width: 100%;
     height: auto;
-}
-
-.tech{
-    
-    margin: 4em 0em 0em 0em;
-}
+} */
 
 
-.tec-container{
-    background-color: aliceblue;
-    margin: 2em 2em 2em 2em ;
-    border-radius: 2em 0em ;
-}
+.project{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #212529; */
+    /* background-color: #ffffff; */
 
-.techbox1{
-    display: flex;
-    height: 20vh;
-    width: 95vw;
-    justify-content:space-evenly;
-    margin: 2em 2em 0em 0em ;
+    background: linear-gradient(195deg, #ffffff 60%, #aeb2b7 20%);
+
+
+    color: rgb(0, 0, 0);
 
 }
 
 
-.techbox2{
-    display: flex;
-    height: 20vh;
-    width: 95vw;
-    justify-content:space-evenly;
-    margin: 0em 2em 2em 0em ;
-
-}
-
-
-.tecbox{
-    align-items: center;
+.project h1{
+    font-size: 3.8rem;
     text-align: center;
-    height: 4em;
-    width: fit-content;
-    background-color: bisque;
-    margin: 2em 0em 0em 0em ;
-
-
+    padding-top: 10vh;
 }
 
-.resume-container{
+.amazon-image-size{
+    width: 100%;
+    max-width: 20vw; 
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius:10px 10px  0px 0px;
+}
+
+.project-container{
     display: flex;
-    background-color:aliceblue;
-    border-radius: 2em 0em 2em 0em;
-    margin: 2em 2em 2em 2em ;
-    justify-content: center;
     align-items: center;
-    
+    justify-content: space-evenly;
+    padding-top: 10vh;
 }
 
+.animation{
+    transition:transform 0.3s ease-in-out ;
+}
 
-.down-resume{
+.animation:hover {
+    transform: scale(1.02);
+}
+
+.project-btn{
+    width: 100%;
+    max-width: 20vw; /* Matches the image's max-width */
+    height: 5vh; /* Adjust height as needed */
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 20vh;
-    width: 20vw;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #495057; 
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////SKILLS/////////////////////////////////////////////////////////// */
+
+
+.skills{
+    height: 100vh;
+    width: 100vw;
+    background-color: #aeb2b7;
+
+
+}
+
+
+.skills h1{
+    font-size: 3.8rem;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+
+.skills-container{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    flex-wrap: wrap;
+}
+
+
+
+.skills-sub-container{
+    width: 100%;
+    max-width: 25vw;
+    height: auto;
+    background-color: aliceblue;
+
+}
+
+.skills-item-container{
+    display: flex;
+}
+
+.skills-item{
+  width: 100%;
+  max-width: 90rem;
+  height: auto;
+  background-color: blueviolet;
 }
 
 
 
 
 
-
-
-
-
-
-
+/* ////////////////////////////////////////////////////////////////FOOT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 .foot {
     height: 20vh;
@@ -251,12 +303,6 @@
 
 /* //////////////////////////////////////FOR MOBILE OR SMALL SCREEN INTERFACE//////////////////////////////////////////////////// */
 
-
-
-
-
-
-
 @media screen and (max-width:480px){
     .navbarbox {
         gap: 1rem;
@@ -269,19 +315,7 @@
     }
 
 
-    .tech-h1{
-        text-align: center;
-    }
-
-
-    .pro-h1{
-        text-align: center;
-    }
     
-
-    .resume-h1{
-        text-align:center;
-    }
 
     .about{
         width: 24rem;
