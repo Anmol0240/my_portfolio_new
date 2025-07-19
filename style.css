@@ -6,6 +6,13 @@
     
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+
 .navbarbox {
     width: 100vw;
     height: 10vh;
@@ -21,7 +28,30 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+
+    background: rgba(251, 238, 238, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 8px 20px;
+
+    transition: 
+        transform 0.4s ease,
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        box-shadow 0.4s ease;
 }
+
+.navbarbox a:hover {
+    transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
 
 .home{
     background: linear-gradient(195deg, #000000 60%, #ffffff 20%);
@@ -217,12 +247,12 @@
 
 
 .animation2{
-    transition:transform 0.3s ease-in-out ;
+    transition:transform 0.4s ease-in-out ;
 }
 
 .animation2:hover {
     transform: scale(1.05);
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px 0 rgba(41, 40, 40, 0.2);
 
 }
 
@@ -231,8 +261,8 @@
 
 .project-btn{
     width: 100%;
-    max-width: 20vw; /* Matches the image's max-width */
-    height: 5vh; /* Adjust height as needed */
+    max-width: 20vw; 
+    height: 5vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +285,9 @@
 .skills{
     height: 100vh;
     width: 100vw;
-    background-color: #aeb2b7;
+    /* background-color: #aeb2b7; */
+    background: linear-gradient(195deg, #aeb2b7 60%, white 20%);
+
 
 
 }
@@ -283,7 +315,7 @@
 .skills-sub-container{
     width: 100%;
     max-width: 25vw;
-    height: auto;
+    height: 50vh;
     background-color: aliceblue;
     padding: 3rem;
     border-radius: 2rem;
@@ -298,14 +330,26 @@
   }
 
 
+.skills-item-container{
+    padding-top: 2rem;
+}
+
+
 .skills-item{
   width: 100%;
   max-width: 90rem;
   height: auto;
   /* background-color: blueviolet; */
-  padding-top: 2rem ;
+  padding-top: 1rem ;
   padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 2rem;
+
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
 .box-one-skills{
@@ -322,16 +366,101 @@
 
 }
 
+/* ////////////////////////////////////////////achivements\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
+.achivements{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(195deg, white 60%,#aeb2b7 20%);
+
+}
+
+
+.achive-h1{
+    display: flex;
+    font-size: 3.9rem;
+    text-align: center;
+    padding-top: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.achive-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top:1rem;
+}
+
+
+.achievement-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 15px;
+    margin: 30px;
+}
+.profile-pic-achive{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-info h2 {
+    margin: 0;
+    font-size: 18px;
+}
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+.description {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.image-container {
+    text-align: center;
+}
+.achievement-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 /* ////////////////////////////////////////////////////////////////FOOT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
-.foot {
+/* .foot {
     height: 20vh;
     width: 100vw;
     background-color: #212529;
     color: azure;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -361,5 +490,8 @@
     .profile-pic {
         max-width: 150px;
       }
+
+
+    
 
 }
