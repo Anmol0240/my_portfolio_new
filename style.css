@@ -391,6 +391,7 @@ html, body {
     justify-content:center;
     align-items: center;
     padding-top:1rem;
+    /* padding-bottom: 2rem; */
 }
 
 
@@ -432,7 +433,19 @@ html, body {
 
 
 
+.image-container {
+    height: 250px;         /* match the image height */
+    overflow: hidden;      /* in case something overflows */
+    margin-bottom: 1rem;   /* spacing from the footer */
+  }
 
+  .carousel-inner img {
+    height: 250px;         /* Fixed height for all images */
+    width: 100%;           /* Full width inside the card */
+    object-fit: cover;     /* Crops image nicely while keeping aspect ratio */
+    border-radius: 10px;   /* Optional: rounded corners for aesthetics */
+  }
+  
 
 
 
