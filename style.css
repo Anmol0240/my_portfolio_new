@@ -54,7 +54,9 @@ html, body {
 
 
 .home{
-    background: linear-gradient(195deg, #000000 60%, #ffffff 20%);
+     background: linear-gradient(195deg, #000000 60%, #ffffff 20%);
+
+    /* background-color: rgb(190, 91, 23);  */
     
     color: whitesmoke;
     display: flex;
