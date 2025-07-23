@@ -618,7 +618,6 @@ html, body {
     border-bottom: 1px solid #666;
     color: #ddd;
     font-size: 14px;
-    text-transform: uppercase;
     outline: none;
     transition: border-color .2s;
   }
@@ -626,6 +625,9 @@ html, body {
   .app-form-control::placeholder {
     color: #666;
   }
+
+
+
 
   .app-form-control:focus {
     border-bottom-color: #ddd;
@@ -734,6 +736,7 @@ html, body {
   .glassIco:hover {
     transform: translateY(-8px);
   }
+
   
 
 
