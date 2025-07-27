@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism</title>
+    <style>
+        .background{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #card{
+            position: absolute;
+            height: 40%;
+            width: 20%;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            background: rgba(89, 131, 83, 0.09);
+            backdrop-filter: blur( 2px );
+            border-radius: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.8s;
+        }
+        #card:hover{
+            backdrop-filter: blur( 14px );
+            height: 50%;
+            width: 25%;
+            transform: rotateY(180deg);
+        }
+        #logo{
+            height: 70%;
+            width: 65%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20231207160829/glass-bg-2.webp">
+        <div id="card">
+           <img id="logo" src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20231207115905/GFG_LOGO-removebg-preview.png">
+        </div>
+    </div>
+</body>
+</html>
