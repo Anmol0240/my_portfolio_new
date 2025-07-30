@@ -13,8 +13,51 @@ html, body {
 }
 
 
+.glass-effect{
+  color: #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5 px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  text-decoration:none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-effect:hover{
+  backdrop-filter: blur(9px);
+  transition: transform 0.4s ease-in-out;
+
+  transform: scale(1.05);
+}
+
+.glass-effect-two{
+  color: #fff;
+  border-radius: 0px 0px 5px 5px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(1 px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  text-decoration:none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 60vw;
+}
+
+.glass-effect-two:hover{
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease-in-out;
+
+  transform: scale(1.05);
+}
+
+
 .navbarbox {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background-color: #495057;
 
@@ -22,6 +65,19 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 4rem;
+
+
+  color: #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1 px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-decoration:none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
 }
 
 .navbarbox a {
@@ -141,6 +197,14 @@ html, body {
   text-align: center;
 }
 
+.link-box a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+
+}
+
 /* ///////////////////////////////////////////////////ABOUT///////////////////////////////////////////////// */
 
 
@@ -177,7 +241,7 @@ html, body {
 
 
 
-  color: rgb(0, 0, 0);
+  color: whitesmoke;
 
 }
 
@@ -241,10 +305,21 @@ html, body {
   color: white;
   transition: all 0.3s ease;
   border-radius: 0px 0px 10px 10px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5 px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 
+.project-btn:hover{
+  backdrop-filter: blur(9px);
+  transition: transform 0.4s ease-in-out;
 
+  transform: scale(1.05);
+}
 
 /* ///////////////////////////////////////////////////////////////SKILLS/////////////////////////////////////////////////////////// */
 
@@ -252,9 +327,6 @@ html, body {
 .skills{
   height: 100vh;
   width: 100vw;
-  /* background-color: #aeb2b7; */
-
-
 
 }
 
@@ -263,6 +335,7 @@ html, body {
   font-size: 3.8rem;
   text-align: center;
   padding-top: 10vh;
+  color: whitesmoke;
 }
 
 
@@ -278,6 +351,8 @@ html, body {
 
 
 
+
+
 .skills-sub-container{
   width: 100%;
   max-width: 25vw;
@@ -288,7 +363,18 @@ html, body {
   box-shadow: 10px 8px 9px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 
+  color: #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1 px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-decoration:none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
+
 
 
 .skills-sub-container:hover {
@@ -341,6 +427,13 @@ flex-wrap: wrap;
 
 }
 
+.achive-h1{
+  font-size: 3.8rem;
+  text-align: center;
+  padding-top: 10vh;
+  color: whitesmoke;        
+}
+
 
 .achive-h1{
   display: flex;
@@ -367,6 +460,20 @@ flex-wrap: wrap;
   width: 300px;
   padding: 15px;
   margin: 30px;
+
+
+  position: relative;
+  
+  color: #fff;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1 px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-decoration:none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 .profile-pic-achive{
   width: 40px;
