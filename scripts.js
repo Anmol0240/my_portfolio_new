@@ -1,3 +1,80 @@
+// Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-menu li');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
+    // Animate menu items
+    if (navMenu.classList.contains('active')) {
+        navLinks.forEach((link, index) => {
+            link.style.opacity = '0';
+            link.style.transform = 'translateX(-20px)';
+            setTimeout(() => {
+                link.style.opacity = '1';
+                link.style.transform = 'translateX(0)';
+                link.style.transition = 'all 0.3s ease ' + (index * 0.1) + 's';
+            }, 50);
+        });
+    } else {
+        navLinks.forEach(link => {
+            link.style.opacity = '0';
+            link.style.transform = 'translateX(-20px)';
+        });
+    }
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close menu when clicking on a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        
+        // Reset animations
+        navLinks.forEach(link => {
+            link.style.opacity = '';
+            link.style.transform = '';
+        });
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbarbox') && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Reset animations
+        navLinks.forEach(link => {
+            link.style.opacity = '';
+            link.style.transform = '';
+        });
+    }
+});
+
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Reset animations
+        navLinks.forEach(link => {
+            link.style.opacity = '';
+            link.style.transform = '';
+        });
+    }
+});
+
+// Matrix background code (your existing code)
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
