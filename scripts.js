@@ -1,3 +1,37 @@
+// Add this at the top of scripts.js BEFORE your existing matrix code
+const loaderCanvas = document.getElementById("loaderCanvas");
+const loaderCtx = loaderCanvas.getContext("2d");
+
+loaderCanvas.width = window.innerWidth;
+loaderCanvas.height = window.innerHeight;
+
+const loaderDrops = Array.from({ length: Math.floor(window.innerWidth / 15) }, () => 1);
+
+function drawLoaderMatrix() {
+  loaderCtx.fillStyle = "rgba(0,0,0,0.05)";
+  loaderCtx.fillRect(0, 0, loaderCanvas.width, loaderCanvas.height);
+  loaderCtx.fillStyle = "#0F0";
+  loaderCtx.font = "15px monospace";
+
+  loaderDrops.forEach((drop, i) => {
+    const text = Math.random() > 0.5 ? "1" : "0";
+    loaderCtx.fillText(text, i * 15, drop * 15);
+    if (drop * 15 > loaderCanvas.height && Math.random() > 0.975) loaderDrops[i] = 0;
+    loaderDrops[i]++;
+  });
+}
+
+const loaderInterval = setInterval(drawLoaderMatrix, 50);
+
+window.addEventListener("load", () => {
+  clearInterval(loaderInterval);
+  const loader = document.getElementById("loader");
+  loader.style.transition = "opacity 1s ease";
+  loader.style.opacity = "0";
+  setTimeout(() => loader.style.display = "none", 1000);
+});
+
+
 // SIMPLE HAMBURGER MENU FIX - GUARANTEED TO WORK
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
@@ -26,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log('Menu closed');
       }
   });
+
+
   
   // Close menu when clicking on links
   navLinks.forEach(link => {
@@ -72,7 +108,7 @@ const columns = canvas.width / fontSize;
 const drops = Array.from({ length: columns }, () => 1);
 
 function drawMatrix() {
-ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ctx.fillStyle = "#0F0";
@@ -99,3 +135,12 @@ window.addEventListener("resize", () => {
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 });
+
+
+// Skills section animation
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}

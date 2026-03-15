@@ -21,6 +21,13 @@
     <title>Document</title>
 </head>
 <body>
+
+<!-- in index.html, first element inside <body> -->
+<div id="loader">
+  <canvas id="loaderCanvas"></canvas>
+  <p id="loader-text">LOADING...</p>
+</div>
+
   <canvas id="matrixCanvas"></canvas>
   <header>
     <nav class="navbarbox">
@@ -120,101 +127,63 @@
 
 <!-- /////////////////////////////////////////////////TechnologieS\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
-    <div class="skills" id="skills">
-        <h1>My Skills</h1>
+   <div class="skills" id="skills">
+  <h1>My Skills</h1>
 
-        <div class="skills-container">
+  <div class="skills-tabs">
+    <button class="tab-btn active" onclick="showTab('programming')">Programming</button>
+    <button class="tab-btn" onclick="showTab('frontend')">Frontend</button>
+    <button class="tab-btn" onclick="showTab('backend')">Backend</button>
+    <button class="tab-btn" onclick="showTab('database')">Database</button>
+    <button class="tab-btn" onclick="showTab('tools')">Tools</button>
+  </div>
 
-            <!-- //////////////////////////////////////////////PROGRAM\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-            <div class="skills-sub-container animation">
-                <h2>Programming Languages</h2>
-
-                <div class="skills-item-container">
-
-                    <div class="box-one-skills">
-                        <div class="skills-item animation2">
-                            <span> C </span>
-                        </div>
-        
-                        <div class="skills-item animation2">
-                            <span>Python</span>
-                        </div>
-                    </div>
-    
-                   <div class="box-one-skills">
-                    <div class="skills-item animation2">
-                        <span>JAVA</span>
-                    </div>
-    
-                    <div class="skills-item animation2">
-                        <span>JavaScript</span>
-                    </div>
-                   </div>
-                </div>
-            </div>
-            
-            <!-- /////////////////////////////////////////////////WEB DEV\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-            <div class="skills-sub-container animation">
-                <h2>Frontend Development</h2>
-
-                <div class="skills-item-container">
-                   
-                    <div class="box-one-skills">
-                        <div class="skills-item animation2">
-                            <span>HTML5</span>
-                        </div>
-        
-                        <div class="skills-item animation2">
-                            <span>CSS</span>
-                        </div>
-                    </div>
-    
-                    <div class="box-one-skills">
-                        <div class="skills-item animation2">
-                            <span>BootStrap</span>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-            </div>
-
-            <!-- ///////////////////////////////////////////////TOOLS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-            <div class="skills-sub-container animation">
-                <h2>Tools & Technologies</h2>
-
-                <div class="skills-item-container">
-                    
-
-                    <div class="box-one-skills">
-                        <div class="skills-item animation2">
-                            <span>Git</span>
-                        </div>
-        
-                        <div class="skills-item animation2">
-                            <span>Github</span>
-                        </div>
-                    </div>
-    
-                    <div class="box-one-skills">
-                        <div class="skills-item animation2">
-                            <span>version control</span>
-                        </div>
-        
-                        <div class="skills-item animation2">
-                            <span>Responsive design</span>
-                        </div>
-                    </div>
-
-                </div>
-                
-            </div>
-        </div>
+  <div class="tab-content active" id="programming">
+    <div class="skills-grid">
+      <div class="skill-card">DSA (Java)</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">C</div>
     </div>
+  </div>
+
+  <div class="tab-content" id="frontend">
+    <div class="skills-grid">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Bootstrap</div>
+      <div class="skill-card">Responsive Design</div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="backend">
+    <div class="skills-grid">
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">Express.js</div>
+      <div class="skill-card">REST APIs</div>
+      <div class="skill-card">WebSockets</div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="database">
+    <div class="skills-grid">
+      <div class="skill-card">MongoDB</div>
+      <div class="skill-card">MySQL</div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tools">
+    <div class="skills-grid">
+      <div class="skill-card">Git</div>
+      <div class="skill-card">GitHub</div>
+      <div class="skill-card">IntelliJ</div>
+      <div class="skill-card">VS Code</div>
+      <div class="skill-card">Postman</div>
+      <div class="skill-card">npm</div>
+    </div>
+  </div>
+</div>
 
 
 <!-- //////////////////////////////////////////////////////Achivements\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
